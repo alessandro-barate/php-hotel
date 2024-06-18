@@ -87,29 +87,28 @@ foreach ($hotels as $hotel) {
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <?php
-                                foreach ($hotels[0] as $key => $value) : ?>
-                                    <th scope="row">
-                                        <?php
-                                        echo $value;
-                                        ?>
-                                    </th>
-                                <?php endforeach ?>
-                                <td>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                                <td>@fat</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td colspan="2">Larry the Bird</td>
-                                <td>@twitter</td>
-                            </tr>
+                            <?php foreach ($hotels as $hotel) : ?>
+                                <tr>
+                                    <?php
+                                    foreach ($hotels as $key => $value) : ?>
+                                        <th scope="row">
+                                        </th>
+                                    <?php endforeach ?>
+                                    <td>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Jacob</td>
+                                    <td>Thornton</td>
+                                    <td>@fat</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td colspan="2">Larry the Bird</td>
+                                    <td>@twitter</td>
+                                </tr>
+                            <?php endforeach; ?>
                         </tbody>
                     </table>
                 </div>
