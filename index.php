@@ -77,7 +77,7 @@ foreach ($hotels as $hotel) {
                         <thead>
                             <tr>
                                 <?php
-                                foreach ($hotels[0] as $key => $value) : ?>
+                                foreach (array_keys($hotels[0]) as $key) : ?>
                                     <th scope="col">
                                         <?php
                                         echo $key;
@@ -93,13 +93,13 @@ foreach ($hotels as $hotel) {
                                     foreach ($hotel as $key => $value) : ?>
                                         <td scope="row">
                                             <?php
-                                            if ($hotel['parking'] === true) {
-                                                $hotel['parking'] = 'Parcheggio disponibile';
-                                                echo '<br>';
-                                            } else {
-                                                $hotel['parking'] = 'Parcheggio non disponibile';
-                                                echo '<br>';
-                                            }
+                                            // if ($hotel['parking'] === true) {
+                                            //     $hotel['parking'] = 'Parcheggio disponibile';
+                                            //     echo $hotel['parking'];
+                                            // } else {
+                                            //     $hotel['parking'] = 'Parcheggio non disponibile';
+                                            //     echo $hotel['parking'];
+                                            // }
                                             ?>
                                         </td>
                                     <?php endforeach ?>
