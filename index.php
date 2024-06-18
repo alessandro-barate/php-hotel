@@ -39,6 +39,14 @@ $hotels = [
     ],
 
 ];
+
+foreach ($hotels as $hotel) {
+    echo '<hr>';
+    foreach ($hotel as $details) {
+        echo $details;
+    }
+};
+
 ?>
 
 <!DOCTYPE html>
