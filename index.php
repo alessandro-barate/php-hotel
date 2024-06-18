@@ -42,8 +42,16 @@ $hotels = [
 
 foreach ($hotels as $hotel) {
     echo '<hr>';
+    if ($hotel['parking'] === true) {
+        $hotel['parking'] = 'Parcheggio disponibile';
+        echo '<br>';
+    } else {
+        $hotel['parking'] = 'Parcheggio non disponibile';
+        echo '<br>';
+    };
+
     foreach ($hotel as $details) {
-        echo $details;
+        echo $details . '<br>';
     }
 };
 
@@ -68,7 +76,10 @@ foreach ($hotels as $hotel) {
                     <table class="table">
                         <thead>
                             <tr>
-                                <th scope="col">#</th>
+                                <th scope="col">
+                                    <?php
+                                    ?>
+                                </th>
                                 <th scope="col">First</th>
                                 <th scope="col">Last</th>
                                 <th scope="col">Handle</th>
