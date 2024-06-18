@@ -1,5 +1,4 @@
 <?php
-
 $hotels = [
 
     [
@@ -41,10 +40,6 @@ $hotels = [
 ];
 
 foreach ($hotels as $hotel) {
-    // $name = $hotel['name'];
-    // $description = $hotel['description'];
-    // $vote = $hotel['vote'];
-    // $distance_to_center = $hotel['distance_to_center'];
 
     echo '<hr>';
     if ($hotel['parking'] === true) {
@@ -81,22 +76,30 @@ foreach ($hotels as $hotel) {
                     <table class="table">
                         <thead>
                             <tr>
-                                <th scope="col">
-                                    <?php echo $hotels[0];
-                                    ?>
-                                </th>
-                                <th scope="col">First</th>
-                                <th scope="col">Last</th>
-                                <th scope="col">Handle</th>
-                                <th scope="col">Handle</th>
+                                <?php
+                                foreach ($hotels[0] as $key => $value) : ?>
+                                    <th scope="col">
+                                        <?php
+                                        echo $key;
+                                        ?>
+                                    </th>
+                                <?php endforeach ?>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
+                                <?php
+                                foreach ($hotels as $hotel) : ?>
+                                    <th scope="row">
+                                        <?php
+                                        foreach ($hotel as $details)
+                                            echo $details;
+                                        ?>
+                                    </th>
+                                <?php endforeach ?>
+                                <td>
+
+                                </td>
                             </tr>
                             <tr>
                                 <th scope="row">2</th>
