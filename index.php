@@ -83,7 +83,7 @@ foreach ($hotels as $hotel) {
                                         echo $key;
                                         ?>
                                     </th>
-                                <?php endforeach ?>
+                                <?php endforeach; ?>
                             </tr>
                         </thead>
                         <tbody>
@@ -91,18 +91,18 @@ foreach ($hotels as $hotel) {
                                 <tr>
                                     <?php
                                     foreach ($hotel as $key => $value) : ?>
-                                        <td scope="row">
-                                            <?php
-                                            // if ($hotel['parking'] === true) {
-                                            //     $hotel['parking'] = 'Parcheggio disponibile';
-                                            //     echo $hotel['parking'];
-                                            // } else {
-                                            //     $hotel['parking'] = 'Parcheggio non disponibile';
-                                            //     echo $hotel['parking'];
-                                            // }
-                                            ?>
+                                        <td>
+                                            <!-- <?php
+                                                    // if ($hotel['parking'] === true) {
+                                                    //     $hotel['parking'] = 'Parcheggio disponibile';
+                                                    //     echo $hotel['parking'];
+                                                    // } else {
+                                                    //     $hotel['parking'] = 'Parcheggio non disponibile';
+                                                    //     echo $hotel['parking'];
+                                                    // }
+                                                    ?> -->
                                         </td>
-                                    <?php endforeach ?>
+                                    <?php endforeach; ?>
                                 </tr>
                             <?php endforeach; ?>
                         </tbody>
