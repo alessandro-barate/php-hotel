@@ -90,23 +90,19 @@ foreach ($hotels as $hotel) {
                             <?php foreach ($hotels as $hotel) : ?>
                                 <tr>
                                     <?php
-                                    foreach ($hotels as $key => $value) : ?>
-                                        <th scope="row">
-                                        </th>
+                                    foreach ($hotel as $key => $value) : ?>
+                                        <td scope="row">
+                                            <?php
+                                            if ($hotel['parking'] === true) {
+                                                $hotel['parking'] = 'Parcheggio disponibile';
+                                                echo '<br>';
+                                            } else {
+                                                $hotel['parking'] = 'Parcheggio non disponibile';
+                                                echo '<br>';
+                                            }
+                                            ?>
+                                        </td>
                                     <?php endforeach ?>
-                                    <td>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">2</th>
-                                    <td>Jacob</td>
-                                    <td>Thornton</td>
-                                    <td>@fat</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">3</th>
-                                    <td colspan="2">Larry the Bird</td>
-                                    <td>@twitter</td>
                                 </tr>
                             <?php endforeach; ?>
                         </tbody>
