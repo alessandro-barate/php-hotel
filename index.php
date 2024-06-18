@@ -89,16 +89,14 @@ foreach ($hotels as $hotel) {
                         <tbody>
                             <tr>
                                 <?php
-                                foreach ($hotels as $hotel) : ?>
+                                foreach ($hotels[0] as $key => $value) : ?>
                                     <th scope="row">
                                         <?php
-                                        foreach ($hotel as $details)
-                                            echo $details;
+                                        echo $value;
                                         ?>
                                     </th>
                                 <?php endforeach ?>
                                 <td>
-
                                 </td>
                             </tr>
                             <tr>
