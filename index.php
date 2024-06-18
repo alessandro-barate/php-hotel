@@ -41,6 +41,11 @@ $hotels = [
 ];
 
 foreach ($hotels as $hotel) {
+    // $name = $hotel['name'];
+    // $description = $hotel['description'];
+    // $vote = $hotel['vote'];
+    // $distance_to_center = $hotel['distance_to_center'];
+
     echo '<hr>';
     if ($hotel['parking'] === true) {
         $hotel['parking'] = 'Parcheggio disponibile';
@@ -77,11 +82,12 @@ foreach ($hotels as $hotel) {
                         <thead>
                             <tr>
                                 <th scope="col">
-                                    <?php
+                                    <?php echo $hotels[0];
                                     ?>
                                 </th>
                                 <th scope="col">First</th>
                                 <th scope="col">Last</th>
+                                <th scope="col">Handle</th>
                                 <th scope="col">Handle</th>
                             </tr>
                         </thead>
